@@ -2,8 +2,8 @@ package com.kirylshreyter.calculator.factories;
 
 import com.kirylshreyter.calculator.common.Constants;
 import com.kirylshreyter.calculator.common.StringUtils;
+import com.kirylshreyter.calculator.datamodel.IOperand;
 import com.kirylshreyter.calculator.datamodel.IOperator;
-import com.kirylshreyter.calculator.datamodel.impl.IOperand;
 import com.kirylshreyter.calculator.datamodel.impl.Operator;
 import com.kirylshreyter.calculator.exceptions.DivisionByZeroException;
 

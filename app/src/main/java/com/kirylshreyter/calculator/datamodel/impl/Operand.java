@@ -7,12 +7,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Main implementation of {@link com.kirylshreyter.calculator.datamodel.IOperand}
+ * Main implementation of {@link IOperand}
  */
-public class IOperand implements com.kirylshreyter.calculator.datamodel.IOperand {
+public class Operand implements IOperand {
     private List<String> memory = new LinkedList<>();
 
-    public IOperand(String initialValue) {
+    public Operand(String initialValue) {
         memory.add(initialValue);
     }
 
