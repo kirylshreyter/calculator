@@ -6,6 +6,7 @@ import com.kirylshreyter.calculator.datamodel.IDisplayResult;
 import com.kirylshreyter.calculator.datamodel.IEmbeddedMemory;
 import com.kirylshreyter.calculator.datamodel.ILogic;
 import com.kirylshreyter.calculator.datamodel.IMemory;
+import com.kirylshreyter.calculator.datamodel.IOperand;
 import com.kirylshreyter.calculator.datamodel.IOperator;
 import com.kirylshreyter.calculator.exceptions.DivisionByZeroException;
 import com.kirylshreyter.calculator.exceptions.MalformedExpressionException;
@@ -22,7 +23,7 @@ public class Memory implements IMemory {
     private ListUtils utils = ListUtils.getInstance();
 
     @Override
-    public IDisplayResult add(com.kirylshreyter.calculator.datamodel.IOperand operand) {
+    public IDisplayResult add(IOperand operand) {
         if (!operand.isDot() || !utils.containsDot(listToScan(embeddedMemory))) {
             embeddedMemory.add(operand);
         }
@@ -103,7 +104,7 @@ public class Memory implements IMemory {
     public IDisplayResult switchSign() {
         if (!embeddedMemory.isEmpty() && Iterables.getLast(embeddedMemory).isOperand()) {
             Integer switchIndex = utils.getFirstOperandIndex(embeddedMemory.indexOf(Iterables.getLast(embeddedMemory)), embeddedMemory);
-            ((com.kirylshreyter.calculator.datamodel.IOperand) embeddedMemory.get(switchIndex)).switchSign();
+            ((IOperand) embeddedMemory.get(switchIndex)).switchSign();
         }
 
         return embeddedMemory.result();
@@ -131,7 +132,7 @@ public class Memory implements IMemory {
         }
 
         IEmbeddedMemory<ILogic> result = new EmbeddedMemory<>();
-        result.add(new IOperand(Iterables.getLast(tempResult)));
+        result.add(new Operand(Iterables.getLast(tempResult)));
 
         return result;
     }
@@ -155,13 +156,13 @@ public class Memory implements IMemory {
         return result;
     }
 
-    private com.kirylshreyter.calculator.datamodel.IOperand operandFromElements(List<ILogic> elements) {
+    private IOperand operandFromElements(List<ILogic> elements) {
         StringBuilder builder = new StringBuilder();
 
         for (ILogic element : elements) {
             builder.append(element.value());
         }
 
-        return new IOperand(builder.toString());
+        return new Operand(builder.toString());
     }
 }

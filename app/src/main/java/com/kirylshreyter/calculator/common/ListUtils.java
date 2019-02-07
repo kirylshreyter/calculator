@@ -4,6 +4,8 @@ import com.google.common.collect.Iterables;
 import com.kirylshreyter.calculator.datamodel.IDisplayResult;
 import com.kirylshreyter.calculator.datamodel.IEmbeddedMemory;
 import com.kirylshreyter.calculator.datamodel.ILogic;
+import com.kirylshreyter.calculator.datamodel.IOperand;
+import com.kirylshreyter.calculator.datamodel.ISeparator;
 import com.kirylshreyter.calculator.datamodel.impl.DisplayResult;
 
 import java.util.ArrayList;
@@ -54,7 +56,7 @@ public class ListUtils {
     }
 
     /**
-     * Gets the last index of {@link com.kirylshreyter.calculator.datamodel.ISeparator} from {@link List<ILogic>}.
+     * Gets the last index of {@link ISeparator} from {@link List<ILogic>}.
      *
      * @param elements {@link List<ILogic>} to scan
      * @return {@link Integer}
@@ -101,7 +103,7 @@ public class ListUtils {
     }
 
     /**
-     * Returns the next index of {@link com.kirylshreyter.calculator.datamodel.ISeparator} in {@code elements}
+     * Returns the next index of {@link ISeparator} in {@code elements}
      *
      * @param startIndex index to start to scan
      * @param elements   to scan
@@ -117,7 +119,7 @@ public class ListUtils {
     }
 
     /**
-     * Returns index of first occurrence of {@link com.kirylshreyter.calculator.datamodel.IOperand} in {@code elements}
+     * Returns index of first occurrence of {@link IOperand} in {@code elements}
      *
      * @param lastIndex index to start to scan
      * @param elements  to scan
@@ -135,7 +137,7 @@ public class ListUtils {
     }
 
     /**
-     * Removes all {@link com.kirylshreyter.calculator.datamodel.ISeparator} from {@code elements}
+     * Removes all {@link ISeparator} from {@code elements}
      *
      * @param elements to clear
      */
