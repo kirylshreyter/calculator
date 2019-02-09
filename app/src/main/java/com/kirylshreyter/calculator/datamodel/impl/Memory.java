@@ -1,6 +1,7 @@
 package com.kirylshreyter.calculator.datamodel.impl;
 
 import com.google.common.collect.Iterables;
+import com.kirylshreyter.calculator.common.Constants;
 import com.kirylshreyter.calculator.common.ListUtils;
 import com.kirylshreyter.calculator.datamodel.IDisplayResult;
 import com.kirylshreyter.calculator.datamodel.IEmbeddedMemory;
@@ -48,6 +49,11 @@ public class Memory implements IMemory {
 
     @Override
     public IDisplayResult result() throws MalformedExpressionException, DivisionByZeroException {
+        if (embeddedMemory.size() == 1 && Iterables.getOnlyElement(embeddedMemory).isOperand()) {
+            return new DisplayResult(Iterables.getOnlyElement(embeddedMemory).value());
+        }
+        if (embeddedMemory.isEmpty()) return new DisplayResult(Constants.EMPTY_STRING);
+
         embeddedMemory.add(new Separator());
         embeddedMemory = convertToStringRepresentation(embeddedMemory);
 
