@@ -11,17 +11,64 @@
         android:id="@+id/text_view_result"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
         android:paddingRight="15dp"
+        android:scrollHorizontally="false"
         android:textAlignment="viewEnd"
-        android:textSize="48sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/text_view_error"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_reset"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="99sp"
+            android:layout_height="76sp"
+            android:text="@string/reset"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            tools:layout_editor_absoluteX="293dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+        <Button
+            android:id="@+id/button_remove_last_element"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="99sp"
+            android:layout_height="76sp"
+            android:text="@string/remove_last_element"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            tools:layout_editor_absoluteX="293dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+        <Button
+            android:id="@+id/button_switch_sign"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="99sp"
+            android:layout_height="76sp"
+            android:text="@string/switch_sign"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="293dp"
+            tools:layout_editor_absoluteY="354dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -35,8 +82,8 @@
         <Button
             android:id="@+id/button_four"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/four"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -46,8 +93,8 @@
         <Button
             android:id="@+id/button_five"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/five"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -57,8 +104,8 @@
         <Button
             android:id="@+id/button_six"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/six"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -72,16 +119,17 @@
         style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="2dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_error">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button_seven"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/seven"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp" />
@@ -89,8 +137,8 @@
         <Button
             android:id="@+id/button_eight"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="100sp"
             android:text="@string/eight"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp" />
@@ -98,8 +146,8 @@
         <Button
             android:id="@+id/button_nine"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/nine"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp" />
@@ -111,14 +159,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
             android:id="@+id/button_one"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/one"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -128,8 +176,8 @@
         <Button
             android:id="@+id/button_two"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/two"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -139,8 +187,8 @@
         <Button
             android:id="@+id/button_three"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/three"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -153,15 +201,16 @@
         style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <Button
             android:id="@+id/button_comma"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/comma"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -171,8 +220,8 @@
         <Button
             android:id="@+id/button_zero"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/zero"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -182,8 +231,8 @@
         <Button
             android:id="@+id/button_equality"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="75dp"
-            android:layout_height="95dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/equality"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -198,28 +247,17 @@
         style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="6dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <Button
-            android:id="@+id/button_reset"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
-            android:text="@string/reset"
-            android:textColor="@color/colorPrimary"
-            android:textSize="36sp"
-            tools:layout_editor_absoluteX="293dp"
-            tools:layout_editor_absoluteY="354dp" />
 
         <Button
             android:id="@+id/button_division"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/division"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp" />
@@ -227,8 +265,8 @@
         <Button
             android:id="@+id/button_multiplication"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/multiplication"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -238,8 +276,8 @@
         <Button
             android:id="@+id/button_subtraction"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/subtraction"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -249,8 +287,8 @@
         <Button
             android:id="@+id/button_addition"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
+            android:layout_width="99sp"
+            android:layout_height="105sp"
             android:text="@string/addition"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
@@ -260,49 +298,19 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        style="?android:attr/buttonBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout5">
-
-        <Button
-            android:id="@+id/button_remove_last_element"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
-            android:text="@string/remove_last_element"
-            android:textColor="@color/colorPrimary"
-            android:textSize="36sp"
-            tools:layout_editor_absoluteX="293dp"
-            tools:layout_editor_absoluteY="354dp" />
-
-        <Button
-            android:id="@+id/button_switch_sign"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
-            android:text="@string/switch_sign"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteX="293dp"
-            tools:layout_editor_absoluteY="354dp" />
-    </LinearLayout>
-
     <TextView
         android:id="@+id/text_view_error"
         android:layout_width="0dp"
         android:layout_height="35dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="76sp"
         android:textAlignment="viewEnd"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

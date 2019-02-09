@@ -119,9 +119,9 @@ public class Memory implements IMemory {
     private List<ILogic> listToScan(IEmbeddedMemory<ILogic> elements) {
         if (elements.isEmpty()) return elements;
 
-        Integer startIndexToScan = utils.getLastIndexOfSeparator(elements);
+        int startIndexToScan = elements.size() == 1 ? 0 : utils.getLastIndexOfSeparator(elements) + 1;
         Integer lastIndexToScan = utils.getLastElementIndex(elements);
-        return elements.subList(startIndexToScan + 1, lastIndexToScan + 1);
+        return elements.subList(startIndexToScan, lastIndexToScan + 1);
     }
 
     private IEmbeddedMemory<ILogic> applyOperations(List<ILogic> elements) {
