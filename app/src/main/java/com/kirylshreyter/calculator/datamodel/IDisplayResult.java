@@ -10,12 +10,5 @@ public interface IDisplayResult {
      *
      * @return {@link String}
      */
-    String value();
-
-    /**
-     * Set the result string to display.
-     *
-     * @param value should be a {@link String}.
-     */
-    void value(String value);
+    String getValue();
 }
