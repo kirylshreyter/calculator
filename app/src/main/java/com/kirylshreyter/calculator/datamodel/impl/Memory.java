@@ -146,13 +146,13 @@ public class Memory implements IMemory {
     private IEmbeddedMemory<ILogic> convertToStringRepresentation(IEmbeddedMemory<ILogic> elements) {
         IEmbeddedMemory<ILogic> result = new EmbeddedMemory<>();
 
-        for (int i = 0; i < elements.size(); i++) {
-            ILogic element = elements.get(i);
+        for (int counter = 0; counter < elements.size(); counter++) {
+            ILogic element = elements.get(counter);
 
             if (element.isOperand()) {
-                int nextIndex = utils.getNextIndexOfSeparator(i, elements);
-                result.add(operandFromElements(elements.subList(i, nextIndex)));
-                i = nextIndex;
+                int nextIndex = utils.getNextIndexOfSeparator(counter, elements);
+                result.add(operandFromElements(elements.subList(counter, nextIndex)));
+                counter = nextIndex;
             } else if (element.isOperator()) {
                 result.add(new Separator());
                 result.add(element);
