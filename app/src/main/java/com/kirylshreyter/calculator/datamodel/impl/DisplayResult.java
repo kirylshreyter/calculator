@@ -13,12 +13,7 @@ public class DisplayResult implements IDisplayResult {
     }
 
     @Override
-    public void value(String value) {
-        this.value = value;
-    }
-
-    @Override
-    public String value() {
+    public String getValue() {
         return this.value;
     }
 }

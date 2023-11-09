@@ -23,26 +23,26 @@ abstract public class Constants {
 
     public static final String EMPTY_STRING = "";
 
-    public static final String INVOKE_ONE_METHOD = "Start invoking one() method";
-    public static final String INVOKE_TWO_METHOD = "Start invoking two() method";
-    public static final String INVOKE_THREE_METHOD = "Start invoking three() method";
-    public static final String INVOKE_FOUR_METHOD = "Start invoking four() method";
-    public static final String INVOKE_FIVE_METHOD = "Start invoking five() method";
-    public static final String INVOKE_SIX_METHOD = "Start invoking six() method";
-    public static final String INVOKE_SEVEN_METHOD = "Start invoking seven() method";
-    public static final String INVOKE_EIGHT_METHOD = "Start invoking eight() method";
-    public static final String INVOKE_NINE_METHOD = "Start invoking nine() method";
-    public static final String INVOKE_ZERO_METHOD = "Start invoking zero() method";
+    public static final String INVOKE_ONE_METHOD = "one() called";
+    public static final String INVOKE_TWO_METHOD = "two() called";
+    public static final String INVOKE_THREE_METHOD = "three() called";
+    public static final String INVOKE_FOUR_METHOD = "four() called";
+    public static final String INVOKE_FIVE_METHOD = "five() called";
+    public static final String INVOKE_SIX_METHOD = "six() called";
+    public static final String INVOKE_SEVEN_METHOD = "seven() called";
+    public static final String INVOKE_EIGHT_METHOD = "eight() called";
+    public static final String INVOKE_NINE_METHOD = "nine() called";
+    public static final String INVOKE_ZERO_METHOD = "zero() called";
 
-    public static final String INVOKE_DOT_METHOD = "Start invoking dot() method";
-    public static final String INVOKE_ADD_METHOD = "Start invoking add() method";
-    public static final String INVOKE_SUBTRACT_METHOD = "Start invoking subtract() method";
-    public static final String INVOKE_DIV_METHOD = "Start invoking div() method";
-    public static final String INVOKE_MULTIPLY_METHOD = "Start invoking multiply() method";
-    public static final String INVOKE_RESULT_METHOD = "Start invoking result() method";
-    public static final String INVOKE_RESET_METHOD = "Start invoking reset() method";
-    public static final String INVOKE_REMOVE_LAST_ELEMENT_METHOD = "Start invoking removeLastElement() method";
-    public static final String INVOKE_SWITCH_SIGN_METHOD = "Start invoking switchSign() method";
+    public static final String INVOKE_DOT_METHOD = " dot() called";
+    public static final String INVOKE_ADD_METHOD = " add() called";
+    public static final String INVOKE_SUBTRACT_METHOD = " subtract() called";
+    public static final String INVOKE_DIV_METHOD = " div() called";
+    public static final String INVOKE_MULTIPLY_METHOD = " multiply() called";
+    public static final String INVOKE_RESULT_METHOD = " result() called";
+    public static final String INVOKE_RESET_METHOD = " reset() called";
+    public static final String INVOKE_REMOVE_LAST_ELEMENT_METHOD = " removeLastElement() called";
+    public static final String INVOKE_SWITCH_SIGN_METHOD = " switchSign() called";
 
     public static final String MALFORMED_EXPRESSION_EXCEPTION_MSG = "Malformed expression";
     public static final String DIVISION_BY_ZERO_EXCEPTION_MSG = "Division by zero is undefined";

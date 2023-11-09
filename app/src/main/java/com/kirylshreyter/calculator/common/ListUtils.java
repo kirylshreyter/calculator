@@ -39,8 +39,8 @@ public class ListUtils {
     public IDisplayResult listToDisplayResult(IEmbeddedMemory<? extends ILogic> inputList) {
         StringBuilder builder = new StringBuilder();
 
-        for (int i = 0; i < inputList.size(); i++) {
-            builder.append(inputList.get(i).value());
+        for (int counter = 0; counter < inputList.size(); counter++) {
+            builder.append(inputList.get(counter).value());
         }
         return new DisplayResult(builder.toString());
     }
@@ -112,8 +112,8 @@ public class ListUtils {
     public Integer getNextIndexOfSeparator(Integer startIndex, List<ILogic> elements) {
         if (elements.isEmpty()) return 0;
 
-        for (int i = startIndex; i < elements.size(); i++) {
-            if (elements.get(i).isSeparator()) return i;
+        for (int counter = startIndex; counter < elements.size(); counter++) {
+            if (elements.get(counter).isSeparator()) return counter;
         }
         return elements.size() - 1;
     }
@@ -126,11 +126,11 @@ public class ListUtils {
      * @return {@link Integer} index of found element.
      */
     public Integer getFirstOperandIndex(Integer lastIndex, List<ILogic> elements) {
-        for (int i = lastIndex; i >= 0; i--) {
-            if (!elements.get(i).isOperand()) {
-                return i + 1;
-            } else if (i == 0) {
-                return i;
+        for (int counter = lastIndex; counter >= 0; counter--) {
+            if (!elements.get(counter).isOperand()) {
+                return counter + 1;
+            } else if (counter == 0) {
+                return counter;
             }
         }
         return lastIndex;
